@@ -36,10 +36,31 @@ footer {
 
 /* Home.html */
 img.home-image{
-    width:210px;
+    width:250px;
 }
 
+@media only screen and (max-width:1200px) {
+    img.home-image{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        
+    }
+}
+
+
+
 /* General */
+
+.col-xs-0, 
+.col-sm-0,
+.col-md-0,
+.col-lg-0 {
+  flex: 0 0 0;
+  max-width: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
 
 ul {
     list-style: none;
@@ -48,6 +69,7 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
     color: #0C343D;
+    font-weight: bold;
     
 }
 
