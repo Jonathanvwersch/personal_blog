@@ -31,7 +31,12 @@ footer {
     left: 0;
     width: 100%;
     padding-top: 1em;
-    margin-top: auto;
+}
+
+
+/* Home.html */
+img.home-image{
+    width:210px;
 }
 
 /* General */
@@ -43,14 +48,46 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
     color: #0C343D;
+    
 }
+
+h1{
+    font-size:40px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 34px;
+    }
+}
+
 
 h2 {
     font-size: 30px;
 }
 
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
 h3 {
     font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 20px;
+    }
+}
+
+p {
+    font-size: 16px;
+}
+
+li {
+    font-size:16px;
 }
 
 /* Blog */
