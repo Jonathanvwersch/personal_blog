@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+    background: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+
+/* Layout.html CSS */
+
+main.container {
+    padding-top: 10em;
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header.site-header .navbar-nav .nav-link:hover {
+    color: #000000;
+}
+
+footer {
+    position: absolute;
+    background-color: #0C343D;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1em;
+    margin-top: auto;
+}
+
+/* General */
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0C343D;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+/* Blog */
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    color: #444444;
+}
+
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
