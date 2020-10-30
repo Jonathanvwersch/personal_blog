@@ -4,16 +4,11 @@ app = Flask(__name__)
 blog_posts = [
     {
         'author': 'Jonathan van Wersch',
-        'title': 'Blog Post 1',
-        'content': 'First Post Content',
-        'date_posted': 'April 20, 2018'
-    },
-
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second Post Content',
-        'date_posted': 'April 21, 2018'
+        'title': "Reviewing Udacity's C++ Nanodegree",
+        'url-title': "Reviewing Udacity's Cpp Nanodegree",
+        'content': "Learning C++ can open up careers in a wide array of fields ranging from robotics to game programming, but at a cost of about $1000, is Udacity's nanodegree the best way to learn it?",
+        'date_posted': 'October 31, 2020',
+        'thumbnail': "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" 
     },
 ]
 
