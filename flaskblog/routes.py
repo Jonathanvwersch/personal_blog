@@ -3,7 +3,6 @@ from flaskblog import app
 from flaskblog.models import Post
 
 @app.route("/")
-@app.route("/starthere")
 def home():
     return render_template('home.html', title = 'Jvw')
 
