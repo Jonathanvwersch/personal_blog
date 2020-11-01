@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+<div class="row">
+    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+        <article class="media content-section col-lg-8" onclick="location.href=''">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <small class="mr-2"></a>Jonathan van Wersch</small>
+                    <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                <a href="/blog/{{ post.id }}/{{ post.url_title }}"><h2 class="article-title">{{ post.title }}</h2></a>
+                <p class="article-content">{{ post.summary }}</p>
+            </div>
+            <img class="blog-thumbnail" src= "{{ post.thumbnail }}"/>
+        </article>
+    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+</div>
+{% endfor %}
+{% endblock content %}

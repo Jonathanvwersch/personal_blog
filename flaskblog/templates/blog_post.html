@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+        <article class="blog col-lg-8">
+            <h1>{{post.title}}</h1>
+            <h4>{{post.summary}}</h4>
+            <h5 style = "font-weight:bold">By {{post.author}}</h5>
+            <h5>{{post.date_posted.strftime('%Y-%m-%d') }}</h5>
+            
+        </article>
+    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+</div>
+{% endblock content %}
