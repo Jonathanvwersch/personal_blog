@@ -8,6 +8,11 @@
             <h5 style = "font-weight:bold">By {{post.author}}</h5>
             <h5>{{post.date_posted.strftime('%Y-%m-%d') }}</h5>
             <img class="img-fluid" src= "{{ post.image  }}"/>
+        
+            <div>
+            <br><br>
+                {{post.content|safe}}
+            </div>
         </article>
     <div class="col-xs-1 col-sm-1 col-lg-2"></div>
 </div>

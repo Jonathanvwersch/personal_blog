@@ -1,6 +1,7 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
 from flaskblog import app
 from flaskblog.models import Post
+from flaskblog import db
 
 @app.route("/")
 def home():
@@ -15,3 +16,20 @@ def blog():
 def blog_post(post_url_title, post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('blog_post.html', title=post.title, post=post)
+
+@app.route("/add")
+def add():
+    return render_template('add.html')
+
+@app.route("/addpost", methods=['POST'])
+def addpost():
+    title= request.form['title']
+    summary=request.form['summary']
+    author=request.form['author']
+    content=request.form['content']
+    image= request.form['image']
+    thumbnail=request.form['thumbnail']
+    post=Post(title=title, summary=summary, author=author, image=image, thumbnail=thumbnail, content=content)
+    db.session.add(post)
+    db.session.commit()
+    return redirect(url_for('blog'))
