@@ -129,6 +129,10 @@ li {
 
 /* Blog */
 
+.parent{
+	position: relative;
+    }
+
 .block {
     display: block;
     position: absolute;
