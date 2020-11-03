@@ -24,12 +24,13 @@ def add():
 @app.route("/addpost", methods=['POST'])
 def addpost():
     title= request.form['title']
+    url_title= request.form['url_title']
     summary=request.form['summary']
     author=request.form['author']
     content=request.form['content']
     image= request.form['image']
     thumbnail=request.form['thumbnail']
-    post=Post(title=title, summary=summary, author=author, image=image, thumbnail=thumbnail, content=content)
+    post=Post(title=title, url_title=url_title, summary=summary, author=author, image=image, thumbnail=thumbnail, content=content)
     db.session.add(post)
     db.session.commit()
     return redirect(url_for('blog'))

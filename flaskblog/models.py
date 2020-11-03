@@ -4,6 +4,7 @@ from datetime import datetime
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
+    url_title = db.Column(db.String(100), nullable=False)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     author = db.Column(db.String(100), nullable=False)
     summary = db.Column(db.Text, nullable=False)
