@@ -9,12 +9,12 @@
                 <div class="media-body">
                     <div class="article-metadata">
                         <small class="mr-2"></a>Jonathan van Wersch</small>
-                        <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                        <small class="text-muted">{{ post.date_posted.strftime("%d %B, %Y") }}</small>
                     </div>
                     <a href="/blog/{{ post.id }}/{{ post.url_title }}"><h2 class="article-title">{{ post.title }}</h2></a>
                     <p class="article-content">{{ post.summary }}</p>
                 </div>
-                <img class="blog-thumbnail" src= "{{ post.thumbnail }}"/>
+                <img title="Blog thumbnail" class="blog-thumbnail" src= "{{ post.thumbnail }}"/>
             </article>
         </a>
     </div>
