@@ -3,7 +3,8 @@
 {% for post in posts %}
 <div class="row">
     <div class="col-lg-1"></div>
-        <a class="col-lg-10 block" href="/blog/{{ post.id }}/{{ post.url_title }}">
+        <div class="col-lg-10">
+        <a class="block" href="/blog/{{ post.id }}/{{ post.url_title }}">
             <article class="media content-section">
                 <div class="media-body">
                     <div class="article-metadata">
@@ -14,6 +15,7 @@
                 </div>
             </article>
         </a>
+        </div>
         <div class="col-lg-1"></div>
 
         <div class="col-lg-1"></div>
