@@ -1,19 +1,42 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="row">
-    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
-        <article class="blog col-lg-8">
-            <h1>{{post.title}}</h1>
-            <h4>{{post.summary}}</h4>
-            <h5 style = "font-weight:bold!important">By {{post.author}}</h5>
-            <h5>{{post.date_posted.strftime("%d %B, %Y") }}</h5>
-            <br>
-            <img class="img-fluid" src= "{{ post.image  }}"/>
-            <div class="blog-content">
-            <br><br>
-                {{post.content|safe}}
+    <article id = "post" class="blog col-lg-12">
+        <h1>{{post.title}}</h1>
+        <div class="flex-container">
+            <i class="far fa-clock"></i>
+            <h5 style="font-weight:bold!important" class="reading-time" id="reading-time">{{ post.content|striptags|length }}</h5>
+        </div>
+        <br>
+        <div class="flex-container">
+            <img src="/static/profile.png" class="profile image-fluid" alt="" />
+            <div class="name-date-container">
+                <h5 class="author" style="font-weight:bold!important">{{post.author}}</h5>
+                <h5 class="date">{{post.date_posted.strftime("%d %B, %Y") }}</h5>
             </div>
-        </article>
-    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
+        </div> 
+        <br>
+        <br>
+        <img class="img-fluid" src="{{ post.image  }}" />
+        <div class="blog-content">
+            <br><br>
+            {{post.content|safe}}
+        </div>
+    </article>
 </div>
+
+<script>
+    var characters = document.getElementById("reading-time").innerHTML;
+    var c = parseInt(characters)
+    const avgWordsPerMin = 250;
+
+    setReadingTime();
+
+    function setReadingTime() {
+        let count = c/ 5;
+        let time = Math.ceil(count / avgWordsPerMin);
+        document.getElementById("reading-time").innerHTML = time +  " min read";
+    }
+
+</script>
 {% endblock content %}

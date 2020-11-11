@@ -2,23 +2,20 @@
 {% block content %}
 {% for post in posts %}
 <div class="row">
-   <div class="col-xs-1 col-sm-1 col-lg-2"></div>
-    <div class="parent col-lg-8">
         <a class="block" href="/blog/{{ post.id }}/{{ post.url_title }}">
             <article class="media content-section">
                 <div class="media-body">
                     <div class="article-metadata">
-                        <small class="mr-2"></a>Jonathan van Wersch</small>
-                        <small class="text-muted">{{ post.date_posted.strftime("%d %B, %Y") }}</small>
+                        <a class="article-title" href="/blog/{{ post.id }}/{{ post.url_title }}"><h1 class="article-title">{{ post.title }}</h1></a>
+                        <p class="mr-2">By Jonathan van Wersch on {{ post.date_posted.strftime("%d %B, %Y") }}</p>
                     </div>
-                    <a href="/blog/{{ post.id }}/{{ post.url_title }}"><h2 class="article-title">{{ post.title }}</h2></a>
                     <p class="article-content">{{ post.summary }}</p>
                 </div>
-                <img title="Blog thumbnail" class="blog-thumbnail" src= "{{ post.thumbnail }}"/>
             </article>
         </a>
+
+        <hr class="solid col-lg-12">
     </div>
-    <div class="col-xs-1 col-sm-1 col-lg-2"></div>
 </div>
 {% endfor %}
 {% endblock content %}

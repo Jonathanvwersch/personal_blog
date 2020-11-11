@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Clean Blog - Start Bootstrap Theme</title>
-</head>
+{% extends "layout.html" %}
+{% block content %}
 
 <body>
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-12">
         <form name="addForm" id="addForm" method="POST" action="{{ url_for('addpost') }}" novalidate>
+
+          <!-- Title -->
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Title</label>
@@ -25,58 +17,61 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
+
+          <!-- URL Title -->
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Url Title</label>
-              <input type="text" class="form-control" placeholder="url_title" name="url_title" id="url_title" required
-                data-validation-required-message="Please enter a title.">
+              <input type="text" class="form-control" placeholder="Url Title" name="url_title" id="url_title" required
+                data-validation-required-message="Please enter a URL title.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
+
+          <!-- Author -->
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
-              <label>Subtitle</label>
-              <input type="text" class="form-control" placeholder="summary" name="summary" id="summary" required
-                data-validation-required-message="Please enter your email address.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Author</label>
               <input type="text" class="form-control" placeholder="Author" name="author" id="author" required
-                data-validation-required-message="Please enter your phone number.">
+                data-validation-required-message="Please enter an author.">
               <p class="help-block text-danger"></p>
             </div>
           </div>
+
+          <!-- Image -->
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
-              <label>Thumbnail</label>
-              <textarea rows="5" class="form-control" placeholder="thumbnail" name="thumbnail" id="thumbnail" required
-                data-validation-required-message="Please enter a message."></textarea>
+              <label>Image</label>
+              <input type="text" class="form-control" placeholder="Image" name="image" id="image" required
+                data-validation-required-message="Please include an image link.">
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Summary</label>
+              <textarea rows="5" class="form-control" placeholder="Summary" name="summary" id="summary" required
+                data-validation-required-message="Please enter a summary."></textarea>
               <p class="help-block text-danger"></p>
             </div>
+          </div>
 
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Image</label>
-                <textarea rows="5" class="form-control" placeholder="image" name="image" id="image" required
-                  data-validation-required-message="Please enter a message."></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls">
-                  <label>Blog Content</label>
-                  <textarea rows="5" class="form-control" placeholder="Blog content" name="content" id="content"
-                    required data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Send</button>
-              </div>
+          <!-- Content -->
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Blog Content</label>
+              <textarea rows="5" class="form-control" placeholder="Blog content" name="content" id="content" required
+                data-validation-required-message="Please enter blog content."></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+
+          <br>
+          <div id="success"></div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+          </div>
         </form>
       </div>
     </div>
@@ -85,7 +80,4 @@
   <hr>
 
 
-
-</body>
-
-</html>
+  {% endblock content %}

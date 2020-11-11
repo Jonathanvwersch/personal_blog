@@ -29,8 +29,7 @@ def addpost():
     author=request.form['author']
     content=request.form['content']
     image= request.form['image']
-    thumbnail=request.form['thumbnail']
-    post=Post(title=title, url_title=url_title, summary=summary, author=author, image=image, thumbnail=thumbnail, content=content)
+    post=Post(title=title, url_title=url_title, summary=summary, author=author, image=image, content=content)
     db.session.add(post)
     db.session.commit()
     return redirect(url_for('blog'))

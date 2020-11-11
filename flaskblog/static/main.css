@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
-    background: #f5f5f5!important;
-    font-family: 'Roboto', sans-serif;
+    background: #ffffff!important;
+    font-family: 'Inter', sans-serif !important;
     position: relative;
     padding-bottom: 100px;
     min-height: 100vh;
@@ -9,14 +9,22 @@ body {
 
 /* Layout.html CSS */
 
+img.home-image {
+    float: right;
+}
+
 main.container {
     padding-top: 10em;
 }
 
 @media only screen and (max-width: 768px) {
-    img.logo{
-        width:75%;
+    img.logo {
+        width: 75%;
     }
+}
+
+a.nav-link {
+    font-size: 14px;
 }
 
 .nav-item {
@@ -36,7 +44,6 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding-top: 1em;
 }
 
 .navbar-collapse.in {
@@ -73,31 +80,31 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
     color: #0C343D;
-    font-weight: bold;
+    font-weight: bold!important;
 }
 
 h1 {
-    font-size: 40px!important;
+    font-size: 50px!important;
 }
 
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 34px!important;
+        font-size: 40px!important;
     }
 }
 
 h2 {
-    font-size: 30px!important;
+    font-size: 40px!important;
 }
 
 @media only screen and (max-width: 768px) {
     h2 {
-        font-size: 24px!important;
+        font-size: 30px!important;
     }
 }
 
 h3 {
-    font-size: 22px!important;
+    font-size: 24px!important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -119,13 +126,13 @@ h4 {
 }
 
 h5 {
-    font-size: 12px!important;
+    font-size: 14px!important;
     font-weight: lighter!important;
 }
 
 @media only screen and (max-width: 768px) {
     h5 {
-        font-size: 10px!important;
+        font-size: 12px!important;
     }
 }
 
@@ -135,87 +142,43 @@ li {
 
 /* Blog */
 
-p{
-    font-size:18px;
+p {
+    font-size: 18px;
 }
 
-.parent{
-	position: relative;
-    }
-
-.block {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+.parent {
+    position: relative;
 }
 
-img.blog-thumbnail {
-    width: 150px;
-    padding-left: 30px;
-    padding-top: 15px;
+p.article-content {
+    font-size: 24px;
 }
 
-@media only screen and (max-width: 768px) {
-    img.blog-thumbnail {
-        display:none;
-    }
-}
-
-.content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.content-section:hover {
-    -webkit-box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.32);
-    -moz-box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.32);
-    box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.32);
-    cursor: pointer;
-}
-
-.article-title:hover {
-    color: #2F6690;
-}
-
-a:hover {
+a.article-title:hover {
     text-decoration: none;
 }
 
-.article-content {
-    white-space: pre-line;
+h1.article-title:hover {
+    color: #2F6690;
 }
 
-.article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
+.blog-content p {
+    font-size: 24px!important;
 }
 
-.article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
+img.profile {
+    width:5%;
 }
 
-.article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
+.flex-container {
+    display: flex;
+    flex-direction: row;
 }
 
-.account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
+.name-date-container {
+    padding-left: 20px;
+    padding-top:10px;
 }
-
-.account-heading {
-    font-size: 2.5rem;
+.reading-time {
+    padding-left: 20px;
 }

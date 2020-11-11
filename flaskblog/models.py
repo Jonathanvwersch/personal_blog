@@ -9,7 +9,6 @@ class Post(db.Model):
     author = db.Column(db.String(100), nullable=False)
     summary = db.Column(db.Text, nullable=False)
     content = db.Column(db.Text, nullable=False)
-    thumbnail = db.Column(db.String(100), nullable=False)
     image = db.Column(db.String(100), nullable=False)
 
     def __repr__(self):
