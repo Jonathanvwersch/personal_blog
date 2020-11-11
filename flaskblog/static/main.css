@@ -141,7 +141,6 @@ li {
 }
 
 
-
 /* Blog */
 
 p {
@@ -170,19 +169,23 @@ h1.article-title:hover {
 }
 
 img.profile {
-    width: 7%;
-    height: auto;
+    max-width:6%;
+    height:auto;
 }
 
 .flex-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .name-date-container {
     padding-left: 20px;
     padding-top:10px;
+    
 }
 .reading-time {
     padding-left: 20px;
+    padding-top:10px;
+
 }
