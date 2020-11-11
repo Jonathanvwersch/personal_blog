@@ -17,12 +17,6 @@ main.container {
     padding-top: 10em;
 }
 
-@media only screen and (max-width: 768px) {
-    img.logo {
-        width: 75%;
-    }
-}
-
 a.nav-link {
     font-size: 14px;
 }
@@ -64,9 +58,6 @@ img.home-image {
     }
 }
 
-img.logo {
-
-}
 
 /* General */
 
