@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="row">
-    <article id = "post" class="blog col-lg-12">
+    <div class="col-lg-2"></div>
+    <article id = "post" class="blog col-lg-8">
         <h1>{{post.title}}</h1>
         <div class="flex-container">
             <i class="far fa-clock"></i>
@@ -23,6 +24,7 @@
             {{post.content|safe}}
         </div>
     </article>
+    <div class="col-lg-2"></div>
 </div>
 
 <script>
