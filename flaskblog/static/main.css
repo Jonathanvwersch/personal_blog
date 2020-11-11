@@ -137,7 +137,7 @@ h5 {
 }
 
 li {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Blog */
@@ -146,12 +146,13 @@ p {
     font-size: 16px;
 }
 
+
 .parent {
     position: relative;
 }
 
 p.article-content {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 a.article-title:hover {

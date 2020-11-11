@@ -2,7 +2,8 @@
 {% block content %}
 {% for post in posts %}
 <div class="row">
-        <a class="block" href="/blog/{{ post.id }}/{{ post.url_title }}">
+    <div class="col-lg-1"></div>
+        <a class="col-lg-10 block" href="/blog/{{ post.id }}/{{ post.url_title }}">
             <article class="media content-section">
                 <div class="media-body">
                     <div class="article-metadata">
@@ -13,9 +14,13 @@
                 </div>
             </article>
         </a>
+        <div class="col-lg-1"></div>
 
-        <hr class="solid col-lg-12">
+        <div class="col-lg-1"></div>
+        <hr class="solid col-lg-10">
+        <div class="col-lg-1"></div>
     </div>
+   
 </div>
 {% endfor %}
 {% endblock content %}
