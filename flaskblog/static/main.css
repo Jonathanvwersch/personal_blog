@@ -164,11 +164,12 @@ h1.article-title:hover {
 }
 
 .blog-content p {
-    font-size: 24px!important;
+    font-size: 16px!important;
 }
 
 img.profile {
-    width:5%;
+    width: 7%;
+    height: auto;
 }
 
 .flex-container {
