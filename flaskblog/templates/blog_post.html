@@ -16,7 +16,7 @@
             <h5 style="font-weight:bold!important" class="reading-time" id="reading-time">{{ post.content|striptags|length }}</h5>
         </div>
         <br>
-        <img class="img-fluid" src="{{ post.image  }}" />
+        <img class="img-fluid" src="{{ post.image }}" />
         <div class="blog-content">
             <br><br>
             {{post.content|safe}}
@@ -35,7 +35,7 @@
     function setReadingTime() {
         let count = c/ 5;
         let time = Math.ceil(count / avgWordsPerMin);
-        document.getElementById("reading-time").innerHTML = time +  " min read";
+        document.getElementById("reading-time").innerHTML = time +  " min. read";
     }
 
 </script>

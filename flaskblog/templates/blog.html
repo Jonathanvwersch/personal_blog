@@ -11,7 +11,7 @@
                         <a class="article-title" href="/blog/{{ post.id }}/{{ post.url_title }}"><h1 class="article-title">{{ post.title }}</h1></a>
                         <p class="mr-2">By Jonathan van Wersch on {{ post.date_posted.strftime("%d %B, %Y") }}</p>
                     </div>
-                    <p class="article-content">{{ post.summary }}</p>
+                    <p class="article-content">{{ post.summary|safe }}</p>
                 </div>
             </article>
         </a>
