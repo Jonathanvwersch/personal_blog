@@ -2,6 +2,11 @@ from flask import render_template, url_for, flash, redirect, request
 from flaskblog import app
 from flaskblog.models import Post
 from flaskblog import db
+from flaskblog import admin
+from flask_admin.contrib.sqla import ModelView
+
+
+admin.add_view(ModelView(Post, db.session))
 
 @app.route("/")
 def home():
