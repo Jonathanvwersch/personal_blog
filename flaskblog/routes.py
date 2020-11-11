@@ -5,7 +5,7 @@ from flaskblog import db
 
 @app.route("/")
 def home():
-    return render_template('home.html', title = 'Jvw')
+    return render_template('home.html', title = 'Jonathan van Wersch')
 
 @app.route("/blog")
 def blog():
