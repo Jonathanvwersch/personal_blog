@@ -160,6 +160,11 @@ h2.article-title:hover {
     font-size: 16px!important;
 }
 
+.blog-content img {
+    margin:auto;
+    width:100%;
+}
+
 img.profile {
     max-width: 40px;
     height: auto;
