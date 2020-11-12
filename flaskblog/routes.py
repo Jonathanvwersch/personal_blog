@@ -31,7 +31,10 @@ def blog_post(post_url_title, post_id):
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.method == "POST":
-        if request.form.get("username") == "Jonathanvw" and request.form.get("password") == "1234":
+        file = open("flaskblog\password.txt","r") 
+        password = file.read()
+        file.close()
+        if request.form.get("username") == "Jonathanvw" and request.form.get("password") == password:
             session['logged_in'] = True
             return redirect("/admin")
         else: 
