@@ -21,7 +21,7 @@ def home():
 @app.route("/blog")
 def blog():
     post = Post.query.all()
-    return render_template('blog.html', title = 'Blog', posts=post)
+    return render_template('blog.html', title = 'Blog', post=post)
 
 @app.route("/blog/<int:post_id>/<string:post_url_title>")
 def blog_post(post_url_title, post_id):
