@@ -4,6 +4,7 @@ from flaskblog.models import Post
 from flaskblog import db
 from flaskblog import admin
 from flask_admin.contrib.sqla import ModelView
+from sqlalchemy import desc
 
 class SecureModelView(ModelView):
     def is_accessible(self):
@@ -20,7 +21,7 @@ def home():
 
 @app.route("/blog")
 def blog():
-    post = Post.query.all()
+    post = Post.query.order_by(Post.date_posted.desc())
     return render_template('blog.html', title = 'Blog', post=post)
 
 @app.route("/blog/<int:post_id>/<string:post_url_title>")
