@@ -15,19 +15,21 @@ class SecureModelView(ModelView):
 
 admin.add_view(SecureModelView(Post, db.session))
 
+content = "Hi, I'm Jonathan and I like to build things. On this site you can find my blog where I write about whatever interests me in the moment"
+
 @app.route("/")
 def home():
-    return render_template('home.html', title = 'Jonathan van Wersch')
+    return render_template('home.html', title = 'Jonathan van Wersch', content=content)
 
 @app.route("/blog")
 def blog():
     post = Post.query.order_by(Post.date_posted.desc())
-    return render_template('blog.html', title = 'Blog', post=post)
+    return render_template('blog.html', title = 'Blog', post=post, content=content)
 
 @app.route("/blog/<int:post_id>/<string:post_url_title>")
 def blog_post(post_url_title, post_id):
     post = Post.query.get_or_404(post_id)
-    return render_template('blog_post.html', title=post.title, post=post)
+    return render_template('blog_post.html', title=post.title, post=post, content=post.summary)
 
 @app.route("/login", methods = ["GET", "POST"])
 def login():
