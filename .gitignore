@@ -3,3 +3,15 @@
 
 #ignore content
 /content
+
+#ignore pycache
+/pycache
+
+#ignore vscode settings
+/.vscode
+
+#ignore requirements
+requirements.txt
+
+#ignore PipFile
+Pipfile
