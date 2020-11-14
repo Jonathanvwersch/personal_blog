@@ -132,13 +132,14 @@ h5 {
 }
 
 li {
-    font-size: 14px;
+    font-size: 16px;
 }
+
 
 /* Blog */
 
 p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .parent {
@@ -155,10 +156,6 @@ a.article-title:hover {
 
 h2.article-title:hover {
     color: #2F6690;
-}
-
-.blog-content p {
-    font-size: 16px!important;
 }
 
 .blog-content img {

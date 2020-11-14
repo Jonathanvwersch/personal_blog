@@ -2,7 +2,7 @@
 /flaskblog/password.txt
 
 #ignore content
-/content
+/blog
 
 #ignore pycache
 /pycache
