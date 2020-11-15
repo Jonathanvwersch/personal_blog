@@ -2,7 +2,7 @@
 {% block content %}
 <div class="row">
     <div class="col-lg-2"></div>
-    <article id = "post" class="blog col-lg-8">
+    <article id="post" class="blog col-lg-8">
         <h1>{{post.title}}</h1>
         <div class="flex-container">
             <img src="/static/profile.png" class="profile image-fluid" alt="" />
@@ -10,10 +10,11 @@
                 <h5 class="author" style="font-weight:bold!important">{{post.author}}</h5>
                 <h5 class="date">{{post.date_posted.strftime("%d %B, %Y") }}</h5>
             </div>
-        </div> 
+        </div>
         <div class="flex-container">
             <i class="far fa-clock"></i>
-            <h5 style="font-weight:bold!important" class="reading-time" id="reading-time">{{ post.content|striptags|length }}</h5>
+            <h5 style="font-weight:bold!important" class="reading-time" id="reading-time">
+                {{ post.content|striptags|length }}</h5>
         </div>
         <br>
         <img class="img-fluid" src="{{ post.image }}" />
@@ -24,19 +25,4 @@
     </article>
     <div class="col-lg-2"></div>
 </div>
-
-<script>
-    var characters = document.getElementById("reading-time").innerHTML;
-    var c = parseInt(characters)
-    const avgWordsPerMin = 250;
-
-    setReadingTime();
-
-    function setReadingTime() {
-        let count = c/ 5;
-        let time = Math.ceil(count / avgWordsPerMin);
-        document.getElementById("reading-time").innerHTML = time +  " min. read";
-    }
-
-</script>
 {% endblock content %}
