@@ -5,10 +5,10 @@
 /blog
 
 #ignore pycache
-/pycache
+__pycache__
 
 #ignore vscode settings
-/.vscode
+.vscode
 
 #ignore requirements
 requirements.txt
