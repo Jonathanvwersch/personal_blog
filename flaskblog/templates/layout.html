@@ -13,9 +13,6 @@
         gtag('config', 'UA-134848426-2');
     </script>
 
-
-
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
@@ -36,10 +33,9 @@
 </head>
 
 <body>
-
     <header class="site-header">
-        <nav class="navbar fixed-top navbar-light navbar-expand-md justify-content-center"
-            style="background-color: #ffffff;">
+        <nav style="background-color:white"
+            class="navbar fixed-top navbar-light navbar-expand-md justify-content-center">
             <div class="container">
                 <a class="navbar-brand mr-0" href="/">
                     <img src="/static/logo_jvw.svg" class="logo" width="50" height="58" alt="">
@@ -72,13 +68,19 @@
                     </ul>
                 </div>
             </div>
+            <div class="header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div>
+            </div>
         </nav>
     </header>
+
+
     <main role="main" class="container">
         {% block content %}{% endblock %}
     </main>
 
-    <br>
     <br>
     <br>
     <br>

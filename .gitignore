@@ -5,10 +5,9 @@
 /blog
 
 #ignore pycache
-__pycache__
-
+C:\Users\jonat\Google Drive\02 Personal Projects\Personal_Blog\__pycache__
 #ignore vscode settings
-.vscode
+C:\Users\jonat\Google Drive\02 Personal Projects\Personal_Blog\.vscode
 
 #ignore requirements
 requirements.txt
