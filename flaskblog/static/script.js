@@ -11,4 +11,14 @@ function setReadingTime() {
     document.getElementById("reading-time").innerHTML = time +  " min. read";
 }
 
+window.onscroll = function() {
+    myFunction()
+};
+
+function myFunction() {  
+    var winScroll = document.documentElement.scrollTop;  
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;  
+    var scrolled = (winScroll / height) * 100;  
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
 
