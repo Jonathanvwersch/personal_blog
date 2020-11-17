@@ -286,6 +286,10 @@ i.fa-clock{
     color:var(--font-color)!important;
 }
 
+button.navbar-toggler.navbar-dark.toggler-example {
+    color:var(--font-color);
+}
+
 /* Login Page*/
 
 div.column.is-4.is-offset-4 {
