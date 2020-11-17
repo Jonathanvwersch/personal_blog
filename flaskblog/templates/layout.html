@@ -9,7 +9,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-134848426-2');
     </script>
 
@@ -34,11 +33,11 @@
 
 <body>
     <header class="site-header">
-        <nav style="background-color:white"
+        <nav
             class="navbar fixed-top navbar-light navbar-expand-md justify-content-center">
             <div class="container">
                 <a class="navbar-brand mr-0" href="/">
-                    <img src="/static/logo_jvw.svg" class="logo" width="50" height="58" alt="">
+                    <img src="/static/logo_jvw.svg" class="logo" id="logo" width="50" height="58" alt="">
                 </a>
                 <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
                     data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
@@ -54,7 +53,7 @@
                             <a class="nav-link" style="font-weight: bold" href="/blog">Blog</a>
                         </li>
                     </ul>
-                    <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+                    <ul class="navbar-nav align-items-center">
                         <li class="nav-item">
                             <a class="nav-link" href="mailto:jonathanvwersch@gmail.com">
                                 <i class="far fa-envelope fa-1x"></i></a>
@@ -65,7 +64,16 @@
                                 <i class="fab fa-medium fa-1x"></i></a>
                             </a>
                         </li>
+                        <li class="nav-link">
+                            <input type="checkbox" class="checkbox" id="checkbox"/>
+                            <label for="checkbox" class="label">
+                                <i class="fas fa-moon"></i>
+                                <i class ="fas fa-sun"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </li>
                     </ul>
+                    
                 </div>
             </div>
             <div class="header">
