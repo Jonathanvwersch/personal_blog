@@ -254,10 +254,14 @@ h2.article-title:hover {
 }
 
 a {
+    color: var(--active-color)!important;
+}
+
+a.nav-link {
     color: var(--font-color)!important;
 }
 
-a:hover {
+a.nav-link:hover {
     color: var(--active-color)!important;
 }
 
