@@ -36,7 +36,7 @@ nav.navbar {
 }
 
 .label {
-    margin-top: 5px;
+    padding-top:10px;
     width: 45px;
     height: 22px;
     display: flex;
