@@ -1,15 +1,3 @@
-// Add horizontal scroll indicator on blog posts
-window.onscroll = function() {
-    myFunction()
-};
-
-function myFunction() {  
-    var winScroll = document.documentElement.scrollTop;  
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;  
-    var scrolled = (winScroll / height) * 100;  
-    document.getElementById("myBar").style.width = scrolled + "%";
-}
-
 // Add dark mode
 
 const toggleSwitch = document.querySelector('.nav-link input[type="checkbox"]');
@@ -44,14 +32,36 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 // Add reading time to each blog
-var characters = document.getElementById("reading-time").innerHTML;
-var c = parseInt(characters);
-const avgWordsPerMin = 250;
+var characters = document.getElementById('reading-time');
 
-setReadingTime();
+if(characters)
+{
+    characters = characters.innerHTML;
 
-function setReadingTime() {
-    let count = c / 5;
-    let time = Math.ceil(count / avgWordsPerMin);
-    document.getElementById("reading-time").innerHTML = time +  " min. read";
+    var c = parseInt(characters);
+    const avgWordsPerMin = 250;
+
+    setReadingTime();
+
+    function setReadingTime() {
+        let count = c / 5;
+        let time = Math.ceil(count / avgWordsPerMin);
+        document.getElementById("reading-time").innerHTML = time +  " min. read";
+    }
+}
+
+// Add horizontal scroll indicator only on blog posts
+
+if (characters)
+{
+    window.onscroll = function() {
+        myFunction()
+    };
+    
+    function myFunction() {  
+        var winScroll = document.documentElement.scrollTop;  
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;  
+        var scrolled = (winScroll / height) * 100;  
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
 }
