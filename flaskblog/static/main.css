@@ -35,8 +35,12 @@ nav.navbar {
     display: none;
 }
 
+li.nav-link{
+    margin-top:5px;
+    
+}
+
 .label {
-    padding-top:10px;
     width: 45px;
     height: 22px;
     display: flex;
