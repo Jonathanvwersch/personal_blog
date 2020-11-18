@@ -1,6 +1,9 @@
 #ignore password
 /flaskblog/password.txt
 
+#ignore username
+/flaskblog/username.txt
+
 #ignore content
 /blog
 
