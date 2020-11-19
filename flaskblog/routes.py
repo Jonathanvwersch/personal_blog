@@ -31,6 +31,12 @@ def blog_post(post_url_title, post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('blog_post.html', title=post.title, post=post, content=post.summary)
 
+
+# @app.route("/projects")
+# def blog():
+#     post = Post.query.order_by(Post.date_posted.desc())
+#     return render_template('blog.html', title = 'Blog', post=post, content=content)
+
 @app.route("/login", methods = ["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -54,20 +60,3 @@ def logout():
     session.clear()
     return redirect("/")
     
-
-# @app.route("/add")
-# def add():
-#     return render_template('add.html')
-
-# @app.route("/addpost", methods=['POST'])
-# def addpost():
-#     title= request.form['title']
-#     url_title= request.form['url_title']
-#     summary=request.form['summary']
-#     author=request.form['author']
-#     content=request.form['content']
-#     image= request.form['image']
-#     post=Post(title=title, url_title=url_title, summary=summary, author=author, image=image, content=content)
-#     db.session.add(post)
-#     db.session.commit()
-#     return redirect(url_for('blog'))

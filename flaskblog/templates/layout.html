@@ -24,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <script src= "https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{title}}</title>
     <meta name="description" content="{{content}}">
@@ -33,20 +34,18 @@
 
 <body>
     <header class="site-header">
-        <nav
-            class="navbar fixed-top navbar-light navbar-expand-md justify-content-center">
+        <nav class="navbar fixed-top navbar-light navbar-expand-md justify-content-center">
             <div class="container">
                 <a class="navbar-brand mr-0" href="/">
                     <img src="/static/logo_jvw.svg" class="logo" id="logo" width="50" height="58" alt="">
                 </a>
                 <button class="navbar-toggler navbar-dark toggler-example" type="button" data-toggle="collapse"
-                    data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="dark-blue-text"><i
-                            class="fas fa-bars fa-1x"></i></span></button>
-                <div class="navbar-collapse collapse justify-content-between align-items-center w-100"
-                    id="navbarToggle">
+                    data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span>
+                </button>
+                <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="navbarToggle">
                     <ul class="navbar-nav mx-auto text-center">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" style="font-weight: bold" href="/">Start Here</a>
                         </li>
                         <li class="nav-item">

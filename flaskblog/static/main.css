@@ -282,9 +282,14 @@ a.nav-link {
     color: var(--font-color)!important;
 }
 
-a.nav-link:hover {
-    color: var(--active-color)!important;
-}
+a.nav-link:hover { 
+    color:green!important;
+} 
+
+
+.navbar-nav>.active>a { 
+    border-bottom: 2px solid var(--active-color);
+} 
 
 img.profile {
     max-width: 40px;

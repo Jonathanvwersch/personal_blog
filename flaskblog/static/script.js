@@ -1,3 +1,10 @@
+// Underline active navbar links
+
+$(document).ready(function() {
+    $('li.nav-item.active').removeClass('active');
+    $('a[href="' + location.pathname + '"]').closest('li.nav-item').addClass('active'); 
+  });
+
 // Add dark mode
 
 const toggleSwitch = document.querySelector('.nav-link input[type="checkbox"]');
@@ -65,3 +72,4 @@ if (characters)
         document.getElementById("myBar").style.width = scrolled + "%";
     }
 }
+
