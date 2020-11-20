@@ -16,7 +16,7 @@ class SecureModelView(ModelView):
 admin.add_view(SecureModelView(Post, db.session))
 admin.add_view(SecureModelView(Project, db.session))
 
-content = "Hi, I'm Jonathan and I like to build things. On this site you can find my blog where I write about whatever interests me in the moment and an overview of the different projects I've worked in my career thus far."
+content = "Hi, I'm Jonathan and I like to build things. On this site you can find my blog where I write about whatever interests me in the moment and an overview of the different projects I've worked on in my career thus far."
 
 @app.route("/")
 def home():
