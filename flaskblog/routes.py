@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request, session, abort
 from flaskblog import app
-from flaskblog.models import Post
+from flaskblog.models import Post, Project
 from flaskblog import db
 from flaskblog import admin
 from flask_admin.contrib.sqla import ModelView
@@ -14,8 +14,9 @@ class SecureModelView(ModelView):
             abort(403)
 
 admin.add_view(SecureModelView(Post, db.session))
+admin.add_view(SecureModelView(Project, db.session))
 
-content = "Hi, I'm Jonathan and I like to build things. On this site you can find my blog where I write about whatever interests me in the moment"
+content = "Hi, I'm Jonathan and I like to build things. On this site you can find my blog where I write about whatever interests me in the moment and an overview of the different projects I've worked in my career thus far."
 
 @app.route("/")
 def home():
@@ -32,10 +33,10 @@ def blog_post(post_url_title, post_id):
     return render_template('blog_post.html', title=post.title, post=post, content=post.summary)
 
 
-# @app.route("/projects")
-# def blog():
-#     post = Post.query.order_by(Post.date_posted.desc())
-#     return render_template('blog.html', title = 'Blog', post=post, content=content)
+@app.route("/projects")
+def projects():
+    project = Project.query.order_by(Project.id)
+    return render_template('projects.html', title = 'Projects', project=project, content=content)
 
 @app.route("/login", methods = ["GET", "POST"])
 def login():

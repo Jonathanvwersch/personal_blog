@@ -5,8 +5,10 @@ $(document).ready(function() {
     $('a[href="' + location.pathname + '"]').closest('li.nav-item').addClass('active'); 
   });
 
-// Add dark mode
 
+//------------------------------------------------------------------------------//
+
+// Add dark mode
 const toggleSwitch = document.querySelector('.nav-link input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 
@@ -38,6 +40,10 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 
+//------------------------------------------------------------------------------//
+
+
+
 // Add reading time to each blog
 var characters = document.getElementById('reading-time');
 
@@ -56,6 +62,12 @@ if(characters)
         document.getElementById("reading-time").innerHTML = time +  " min. read";
     }
 }
+
+
+//------------------------------------------------------------------------------//
+
+
+
 
 // Add horizontal scroll indicator only on blog posts
 
