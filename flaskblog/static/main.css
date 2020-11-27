@@ -476,3 +476,9 @@ h3.title {
 .project p{
    font-size:14px;
 }
+
+@media only screen and (max-width: 768px) {
+    .project p{
+        font-size:12px;
+    }
+}
