@@ -1,24 +1,21 @@
 {% extends "layout.html" %} {% block content %} {% for project_row in project |
 batch(3, '&nbsp;') %}
 <div class="row col-lg-12">
-  {% for project in project_row %}
-
-  {% if project.image %}
+  {% for project in project_row %} {% if project.image %}
   <div class="project col-lg-4">
     <figure class="thumbnail">
       <div class="summary">
-        <p>{{project.summary}}</p>
+        <p>{{project.summary|safe}}</p>
       </div>
-      <img class="img-fluid" src="{{ project.image }}" />
-     
+      <div></div>
+      <img class="img-fluid" src="{{ project.image}}" />
     </figure>
 
     <div class="description">
-      <h4>{{ project. title }}</h4>
+      <h4>{{ project.title }}</h4>
       <p>{{ project.field }}</p>
     </div>
   </div>
-  {% endif %}
-  {% endfor %}
+  {% endif %} {% endfor %}
 </div>
 {% endfor %} {% endblock %}
